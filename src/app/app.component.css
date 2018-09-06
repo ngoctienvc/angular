@@ -1,0 +1,20 @@
+a:hover {
+    text-decoration:none;
+ }
+.button-row button,
+.button-row a {
+  margin-right: 8px;
+}
+.parent {
+    width: 100%; /* I took the width from your post and placed it in css */
+    height: 67px;
+ }
+ 
+ /* This will style any <img> element in .parent div */
+ .parent img {
+    height: 100%;
+    width: 100%;
+ }
+ .framem {
+    height: 73px !important;
+ }

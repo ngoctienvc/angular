@@ -1,0 +1,17 @@
+<br>  <br>
+<mat-list>
+    <mat-list-item *ngFor="let post of posts | slice: startPage:paginationLimit" class="frame">
+      <div class="row">
+        <div class="col-md-3 parent">
+            <a routerLink="/jobdetail/{{post.id}}"><img mat-card-image src="{{post.imgUrl}}" alt="Random first slide"></a>
+        </div>
+        <div class="col-md-9">
+            <a routerLink="/newdetail/{{post.id}}"> <h4 mat-line>{{post.title}}</h4> </a> 
+            <p mat-line> {{post.description}} </p>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-list-item>
+    <br>
+    <button mat-raised-button color="primary" *ngIf ="paginationLimit < posts.length" (click)="showMoreItems()" >Show more...</button>
+</mat-list>
